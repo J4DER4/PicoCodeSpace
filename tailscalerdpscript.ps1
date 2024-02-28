@@ -38,7 +38,8 @@ Any additional notes or information about the code.
 
 # Your code goes here
 
-
+#set execution policy
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 # Get the ID and security principal of the current user account
 $myWindowsID=[System.Security.Principal.WindowsIdentity]::GetCurrent()
 $myWindowsPrincipal=new-object System.Security.Principal.WindowsPrincipal($myWindowsID)
