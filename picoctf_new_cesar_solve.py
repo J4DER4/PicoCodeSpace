@@ -21,6 +21,8 @@ def decrypt(encrypted_flag):
 		splitted_ecnrypted_flag = [splitted_ecnrypted_flag[i:i+2] for i in range(0, len(encrypted_flag), 2)]
 		# decode the unsifted pairs
 		flag = ''.join([chr(b16_decode(pair)) for pair in splitted_ecnrypted_flag])  # Convert the result of b16_decode to a character
-		print(' Key: ', alpha, 'with length: ', len(flag), ' Flag: ', flag)
+		# known plaintext et_tu? in flag 
+		if 'et_tu?' in flag :
+			print(' Key: ', alpha, 'with length: ', len(flag), ' Flag: picoCTF{', flag.rstrip(), '}', sep='')
 
 decrypt(encoded_flag)
