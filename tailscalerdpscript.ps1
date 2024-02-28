@@ -76,12 +76,18 @@ else
 }
 
 # Run your code that needs to be elevated here
-# Define parameters
-$Server = '100.85.76.130'
-$User = 'LPP4'
-$Password = 'xd'
+# ADD YOUR PARAMETERS HERE
+
+#TARGET SERVER host
+$Server = ''
+#username for w10 account
+$User = ''
+#password for w10 account
+$Password = ''
+#Tailscale download link
 $TailscaleDownloadLink = 'https://pkgs.tailscale.com/stable/tailscale-setup-latest.exe'
-$Authkey = 'tskey-auth-ktQzLE7CNTRL-8VJb2QTbXGMTjmsZ2rkPLMomCk6jiHfwa'
+#Tailscale Authkey generated from the tailscale admin console
+$Authkey = ''
 
 # Download Tailscale
 Invoke-WebRequest -Uri $TailscaleDownloadLink -OutFile 'tailscale-setup-latest.exe'
